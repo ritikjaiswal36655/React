@@ -4,13 +4,13 @@ import { useState } from 'react'
 function App() {
   const [count, setCount] = useState(0)
   const increment = () => {
-    setCount(count+1)
+    setCount(preCount=>preCount+1)
   } 
   const decrease = () => {
     if (count === 0) {
       setCount(0)
     } else {
-      setCount(count-1)
+      setCount(count=>count-1)
     }
     
   }
